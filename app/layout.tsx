@@ -1,45 +1,38 @@
-import { Poppins } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-const poppins = Poppins({
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-poppins',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter',
   display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: 'Chris Bradshaw - CV | Applied AI Leader',
-  description: 'Professional CV for Chris Bradshaw: Applied AI Leader, Startup Builder, and Technical Team Architect. Manager, Applied AI experience across EMEA.',
+  title: 'Chris Bradshaw | Anthropic Application',
+  description: 'AI Transformation Leader and Applied AI Architect candidate introduction for Anthropic.',
   openGraph: {
-    title: 'Chris Bradshaw - CV',
-    description: 'Applied AI Leader | Startup Builder | Technical Team Architect',
-    url: 'https://cv.chrisbradshaw.ai',
-    siteName: 'Chris Bradshaw CV',
-    // NOTE: OG image to be added later - requires 1200x630px image
-    // Remove images array for now to avoid 404 errors
+    title: 'Chris Bradshaw | Anthropic Application',
+    description: 'AI Transformation Leader and Applied AI Architect candidate introduction for Anthropic.',
+    url: 'https://anthropic.chrisbradshaw.ai',
+    siteName: 'Chris Bradshaw',
     locale: 'en_GB',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chris Bradshaw - CV',
-    description: 'Applied AI Leader | Startup Builder | Technical Team Architect',
-    // OG image to be added later
+    title: 'Chris Bradshaw | Anthropic Application',
+    description: 'AI Transformation Leader and Applied AI Architect candidate introduction for Anthropic.',
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={poppins.variable}>
-      <body className="font-sans">
+    <html lang="en" className={inter.variable}>
+      <body>
         {children}
         <Analytics />
         <SpeedInsights />

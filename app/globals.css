@@ -3,84 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --accent-purple: #7a00df;
-  --accent-blue: #0693e3;
-  --accent-green: #00d084;
-  --accent-orange: #ff6900;
-  --bg-dark: #000000;
-  --bg-elevated: #313131;
-  --bg-surface: #2b2b2b;
-  --text-primary: #ffffff;
-  --text-muted: #a0a0a0;
+  --accent: #C25D3C;
+  --bg: #FAFAF8;
+  --text: #1C1C1C;
+  --muted: #6B6B6B;
+  --border: #E5E3DF;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--bg-dark);
-  color: var(--text-primary);
-  font-family: var(--font-poppins), system-ui, sans-serif;
-}
-
-/* Print Styles */
-@media print {
-  /* Hide interactive elements */
-  nav, button, .no-print {
-    display: none !important;
-  }
-
-  /* Format for print */
-  body {
-    background: white;
-    color: black;
-  }
-
-  /* Page margins */
-  @page {
-    margin: 1in;
-  }
-
-  /* Typography for print */
-  h1 {
-    font-size: 24pt;
-    color: black;
-  }
-
-  h2 {
-    font-size: 18pt;
-    color: black;
-  }
-
-  h3 {
-    font-size: 14pt;
-    color: black;
-  }
-
-  body {
-    font-size: 11pt;
-    line-height: 1.4;
-    color: black;
-  }
-
-  p, li {
-    color: black;
-  }
-
-  /* Remove golden accents for print */
-  * {
-    border-color: black !important;
-  }
-
-  /* Page breaks */
-  h1, h2, h3 {
-    page-break-after: avoid;
-  }
-
-  section {
-    page-break-inside: avoid;
-  }
-
-  /* Ensure links are readable in print */
-  a {
-    color: black;
-    text-decoration: underline;
-  }
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
