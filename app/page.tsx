@@ -81,243 +81,235 @@ const DOCS = [
   },
 ];
 
+const col: React.CSSProperties = {
+  maxWidth: '680px',
+  margin: '0 auto',
+  padding: '0 32px',
+};
+
+const sectionPad: React.CSSProperties = {
+  paddingTop: '88px',
+  paddingBottom: '88px',
+};
+
+const label: React.CSSProperties = {
+  fontSize: '11px',
+  fontWeight: 600,
+  letterSpacing: '0.12em',
+  textTransform: 'uppercase',
+  color: 'var(--muted)',
+  marginBottom: '20px',
+  display: 'block',
+};
+
+const h2Style: React.CSSProperties = {
+  fontFamily: 'var(--font-lora), Georgia, serif',
+  fontSize: 'clamp(1.6rem, 3vw, 2.1rem)',
+  fontWeight: 600,
+  letterSpacing: '-0.02em',
+  lineHeight: 1.2,
+  color: 'var(--text)',
+  marginBottom: '32px',
+};
+
 export default function Page() {
   return (
     <>
-      {/* ── Nav ──────────────────────────────────────────────── */}
+      {/* ── Nav ─────────────────────────────────────────── */}
       <header style={{ background: 'var(--nav-bg)' }}>
-        <div className="max-w-3xl mx-auto px-8 py-4 flex items-center justify-between">
-          <span className="text-sm font-medium tracking-wide text-white">Chris Bradshaw</span>
-          <a
-            href="mailto:mail@chrisbradshaw.ai"
-            className="text-xs transition-opacity hover:opacity-70 hidden sm:block"
-            style={{ color: 'rgba(255,255,255,0.5)' }}
-          >
+        <div style={{ maxWidth: '760px', margin: '0 auto', padding: '0 32px', height: '56px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <span style={{ fontSize: '14px', fontWeight: 600, color: '#fff', letterSpacing: '0.01em' }}>
+            Chris Bradshaw
+          </span>
+          <a href="mailto:mail@chrisbradshaw.ai" style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>
             mail@chrisbradshaw.ai
           </a>
         </div>
       </header>
 
       <main>
-        {/* ── 1. Hero ──────────────────────────────────────────── */}
-        <section className="max-w-2xl mx-auto px-6 pt-24 pb-20">
-          <p className="text-xs font-medium mb-8 tracking-widest uppercase" style={{ color: 'var(--muted)' }}>
-            Anthropic · Applied AI Architect Application
-          </p>
-          <h1
-            className="font-serif font-semibold leading-tight mb-6"
-            style={{ color: 'var(--text)', letterSpacing: '-0.02em', fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}
-          >
-            Chris Bradshaw
-          </h1>
-          <p className="text-base mb-8" style={{ color: 'var(--muted)', maxWidth: '44ch' }}>
-            AI Transformation Leader · Applied AI Architect · Product Strategy Director
-          </p>
-          <p className="text-lg leading-relaxed mb-12" style={{ color: 'var(--text)', maxWidth: '60ch', lineHeight: '1.8' }}>
-            I help organisations translate frontier AI capabilities into trusted, scalable, and measurable
-            outcomes — building the confidence, governance, and organisational capability required to deploy
-            AI safely and responsibly at scale.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="#video"
-              className="inline-flex items-center px-6 py-3 rounded-full text-sm font-medium transition-opacity hover:opacity-80"
-              style={{ background: 'var(--nav-bg)', color: '#fff' }}
-            >
-              Watch Introduction
-            </a>
-            <a
-              href="/docs/Chris-Bradshaw-Anthropic-CV.pdf"
-              className="inline-flex items-center px-6 py-3 rounded-full text-sm font-medium transition-opacity hover:opacity-70"
-              style={{ background: 'var(--bg-card)', color: 'var(--text)' }}
-            >
-              Download CV
-            </a>
+        {/* ── 1. Hero ─────────────────────────────────────── */}
+        <section style={{ ...sectionPad, paddingTop: '96px' }}>
+          <div style={col}>
+            <span style={label}>Anthropic · Applied AI Architect Application</span>
+            <h1 style={{
+              fontFamily: 'var(--font-lora), Georgia, serif',
+              fontSize: 'clamp(2.8rem, 6vw, 4.2rem)',
+              fontWeight: 600,
+              letterSpacing: '-0.03em',
+              lineHeight: 1.1,
+              color: 'var(--text)',
+              marginBottom: '20px',
+            }}>
+              Chris Bradshaw
+            </h1>
+            <p style={{ fontSize: '15px', color: 'var(--muted)', marginBottom: '28px', lineHeight: 1.5 }}>
+              AI Transformation Leader · Applied AI Architect · Product Strategy Director
+            </p>
+            <p style={{ fontSize: '17px', lineHeight: 1.8, color: 'var(--text)', marginBottom: '40px', maxWidth: '56ch' }}>
+              I help organisations translate frontier AI capabilities into trusted, scalable, and measurable
+              outcomes — building the confidence, governance, and organisational capability required to deploy
+              AI safely and responsibly at scale.
+            </p>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              <a href="#video" style={{
+                display: 'inline-flex', alignItems: 'center',
+                padding: '12px 24px', borderRadius: '100px',
+                background: 'var(--nav-bg)', color: '#fff',
+                fontSize: '14px', fontWeight: 500, textDecoration: 'none',
+              }}>
+                Watch Introduction
+              </a>
+              <a href="/docs/Chris-Bradshaw-Anthropic-CV.pdf" style={{
+                display: 'inline-flex', alignItems: 'center',
+                padding: '12px 24px', borderRadius: '100px',
+                background: 'var(--bg-card)', color: 'var(--text)',
+                fontSize: '14px', fontWeight: 500, textDecoration: 'none',
+              }}>
+                Download CV
+              </a>
+            </div>
           </div>
         </section>
 
-        {/* ── 2. Video ─────────────────────────────────────────── */}
-        <section id="video" style={{ background: 'var(--bg-card)' }}>
-          <div className="max-w-2xl mx-auto px-6 py-20">
-            <p className="text-xs font-medium mb-4 tracking-widest uppercase" style={{ color: 'var(--muted)' }}>Introduction</p>
-            <h2
-              className="font-serif font-semibold mb-4"
-              style={{ color: 'var(--text)', letterSpacing: '-0.02em', fontSize: 'clamp(1.75rem, 3vw, 2.25rem)' }}
-            >
-              Personal Introduction
-            </h2>
-            <p className="text-sm leading-relaxed mb-8" style={{ color: 'var(--muted)', maxWidth: '52ch' }}>
+        {/* ── 2. Video ────────────────────────────────────── */}
+        <section id="video" style={{ ...sectionPad, background: 'var(--bg-card)' }}>
+          <div style={col}>
+            <span style={label}>Introduction</span>
+            <h2 style={h2Style}>Personal Introduction</h2>
+            <p style={{ fontSize: '15px', lineHeight: 1.7, color: 'var(--muted)', marginBottom: '32px', maxWidth: '50ch' }}>
               A short introduction to my background, why Anthropic, and how my experience maps to enterprise AI adoption.
             </p>
-            <div
-              className="relative w-full overflow-hidden rounded-xl"
-              style={{ aspectRatio: '16/9', background: '#0f0f0f' }}
-            >
+            <div style={{ position: 'relative', width: '100%', paddingBottom: '56.25%', background: '#0f0f0f', borderRadius: '12px', overflow: 'hidden' }}>
               <iframe
                 src="https://app.heygen.com/embeds/b7effc58a6114899845ee29e6c092360"
                 title="Avatar Video"
                 frameBorder="0"
                 allow="encrypted-media; fullscreen;"
                 allowFullScreen
-                className="absolute inset-0 w-full h-full"
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
               />
             </div>
-            <p className="mt-4">
-              <a
-                href="https://app.heygen.com/videos/avatar-video-b7effc58a6114899845ee29e6c092360"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs transition-opacity hover:opacity-60"
-                style={{ color: 'var(--muted)', textDecoration: 'underline', textUnderlineOffset: '4px' }}
-              >
+            <p style={{ marginTop: '16px' }}>
+              <a href="https://app.heygen.com/videos/avatar-video-b7effc58a6114899845ee29e6c092360"
+                target="_blank" rel="noopener noreferrer"
+                style={{ fontSize: '12px', color: 'var(--muted)', textDecoration: 'underline', textUnderlineOffset: '4px' }}>
                 Open in new tab →
               </a>
             </p>
           </div>
         </section>
 
-        {/* ── 3. Why Anthropic ─────────────────────────────────── */}
-        <section className="max-w-2xl mx-auto px-6 py-20">
-          <p className="text-xs font-medium mb-4 tracking-widest uppercase" style={{ color: 'var(--muted)' }}>Alignment</p>
-          <h2
-            className="font-serif font-semibold mb-10"
-            style={{ color: 'var(--text)', letterSpacing: '-0.02em', fontSize: 'clamp(1.75rem, 3vw, 2.25rem)' }}
-          >
-            Why Anthropic
-          </h2>
-          <div className="space-y-6" style={{ maxWidth: '60ch' }}>
-            <p className="text-base leading-relaxed" style={{ color: 'var(--text)', lineHeight: '1.8' }}>
-              Most failed AI initiatives do not fail because the technology is inadequate. They fail because
-              organisations underestimate that adoption is a human, organisational, and operating-model
-              challenge as much as a technical one.
-            </p>
-            <p className="text-base leading-relaxed" style={{ color: 'var(--text)', lineHeight: '1.8' }}>
-              My work sits at that intersection: helping executives, operators, product teams, and technical
-              teams move from fragmented experimentation to trusted, governed, and scalable AI capability.
-            </p>
-            <p className="text-base leading-relaxed" style={{ color: 'var(--text)', lineHeight: '1.8' }}>
-              Anthropic's focus on reliable, controllable, and responsible AI aligns strongly with how I
-              believe enterprises need to adopt AI: safely, thoughtfully, and with clear routes to measurable value.
-            </p>
+        {/* ── 3. Why Anthropic ────────────────────────────── */}
+        <section style={sectionPad}>
+          <div style={col}>
+            <span style={label}>Alignment</span>
+            <h2 style={h2Style}>Why Anthropic</h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxWidth: '56ch' }}>
+              {[
+                'Most failed AI initiatives do not fail because the technology is inadequate. They fail because organisations underestimate that adoption is a human, organisational, and operating-model challenge as much as a technical one.',
+                'My work sits at that intersection: helping executives, operators, product teams, and technical teams move from fragmented experimentation to trusted, governed, and scalable AI capability.',
+                "Anthropic's focus on reliable, controllable, and responsible AI aligns strongly with how I believe enterprises need to adopt AI: safely, thoughtfully, and with clear routes to measurable value.",
+              ].map((p, i) => (
+                <p key={i} style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--text)' }}>{p}</p>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* ── 4. Experience ────────────────────────────────────── */}
-        <section style={{ background: 'var(--bg-card)' }}>
-          <div className="max-w-2xl mx-auto px-6 py-20">
-            <p className="text-xs font-medium mb-4 tracking-widest uppercase" style={{ color: 'var(--muted)' }}>Background</p>
-            <h2
-              className="font-serif font-semibold mb-10"
-              style={{ color: 'var(--text)', letterSpacing: '-0.02em', fontSize: 'clamp(1.75rem, 3vw, 2.25rem)' }}
-            >
-              Experience Snapshot
-            </h2>
-            <div className="grid grid-cols-1 gap-4">
+        {/* ── 4. Experience ───────────────────────────────── */}
+        <section style={{ ...sectionPad, background: 'var(--bg-card)' }}>
+          <div style={col}>
+            <span style={label}>Background</span>
+            <h2 style={h2Style}>Experience Snapshot</h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {EXPERIENCE.map((e) => (
-                <div key={e.org} className="rounded-xl p-7" style={{ background: 'var(--bg)' }}>
-                  <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: 'var(--muted)' }}>
-                    {e.org}
-                  </p>
-                  <p className="text-sm font-semibold mb-2" style={{ color: 'var(--text)' }}>{e.title}</p>
-                  <p className="text-sm leading-relaxed" style={{ color: 'var(--muted)', lineHeight: '1.7' }}>{e.desc}</p>
+                <div key={e.org} style={{ background: 'var(--bg)', borderRadius: '12px', padding: '28px 32px' }}>
+                  <p style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '10px' }}>{e.org}</p>
+                  <p style={{ fontSize: '15px', fontWeight: 600, color: 'var(--text)', marginBottom: '10px' }}>{e.title}</p>
+                  <p style={{ fontSize: '14px', lineHeight: 1.7, color: 'var(--muted)' }}>{e.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── 5. Core Strengths ────────────────────────────────── */}
-        <section className="max-w-2xl mx-auto px-6 py-20">
-          <p className="text-xs font-medium mb-4 tracking-widest uppercase" style={{ color: 'var(--muted)' }}>Capabilities</p>
-          <h2
-            className="font-serif font-semibold mb-10"
-            style={{ color: 'var(--text)', letterSpacing: '-0.02em', fontSize: 'clamp(1.75rem, 3vw, 2.25rem)' }}
-          >
-            Core Strengths
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {STRENGTHS.map((s) => (
-              <span
-                key={s}
-                className="px-4 py-2 rounded-full text-sm"
-                style={{ background: 'var(--bg-card)', color: 'var(--text)' }}
-              >
-                {s}
-              </span>
-            ))}
+        {/* ── 5. Core Strengths ───────────────────────────── */}
+        <section style={sectionPad}>
+          <div style={col}>
+            <span style={label}>Capabilities</span>
+            <h2 style={h2Style}>Core Strengths</h2>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+              {STRENGTHS.map((s) => (
+                <span key={s} style={{
+                  display: 'inline-block',
+                  padding: '8px 18px', borderRadius: '100px',
+                  background: 'var(--bg-card)', color: 'var(--text)',
+                  fontSize: '13px', fontWeight: 500,
+                }}>
+                  {s}
+                </span>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* ── 6. Documents & Links ─────────────────────────────── */}
-        <section style={{ background: 'var(--bg-card)' }}>
-          <div id="documents" className="max-w-2xl mx-auto px-6 py-20">
-            <p className="text-xs font-medium mb-4 tracking-widest uppercase" style={{ color: 'var(--muted)' }}>Resources</p>
-            <h2
-              className="font-serif font-semibold mb-10"
-              style={{ color: 'var(--text)', letterSpacing: '-0.02em', fontSize: 'clamp(1.75rem, 3vw, 2.25rem)' }}
-            >
-              Documents &amp; Links
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {/* ── 6. Documents & Links ────────────────────────── */}
+        <section style={{ ...sectionPad, background: 'var(--bg-card)' }}>
+          <div id="documents" style={col}>
+            <span style={label}>Resources</span>
+            <h2 style={h2Style}>Documents &amp; Links</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '12px' }}>
               {DOCS.map((d) => (
-                <a
-                  key={d.label}
-                  href={d.href}
+                <a key={d.label} href={d.href}
                   target={d.external ? '_blank' : undefined}
                   rel={d.external ? 'noopener noreferrer' : undefined}
-                  className="flex items-center justify-between rounded-xl px-5 py-4 text-sm font-medium transition-opacity hover:opacity-70"
-                  style={{ background: 'var(--bg)', color: 'var(--text)', textDecoration: 'none' }}
+                  style={{
+                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                    padding: '16px 20px', borderRadius: '12px',
+                    background: 'var(--bg)', color: 'var(--text)',
+                    fontSize: '14px', fontWeight: 500, textDecoration: 'none',
+                  }}
                 >
                   <span>{d.label}</span>
-                  <span style={{ color: 'var(--muted)' }}>{d.icon}</span>
+                  <span style={{ color: 'var(--muted)', fontSize: '16px', marginLeft: '12px' }}>{d.icon}</span>
                 </a>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── 7. Contact ───────────────────────────────────────── */}
-        <section className="max-w-2xl mx-auto px-6 py-20">
-          <p className="text-xs font-medium mb-4 tracking-widest uppercase" style={{ color: 'var(--muted)' }}>Contact</p>
-          <h2
-            className="font-serif font-semibold mb-8"
-            style={{ color: 'var(--text)', letterSpacing: '-0.02em', fontSize: 'clamp(1.75rem, 3vw, 2.25rem)' }}
-          >
-            Get In Touch
-          </h2>
-          <div className="space-y-1.5 text-sm" style={{ color: 'var(--muted)' }}>
-            <p>
-              <a href="mailto:mail@chrisbradshaw.ai" className="font-medium hover:opacity-70 transition-opacity" style={{ color: 'var(--text)' }}>
-                mail@chrisbradshaw.ai
-              </a>
-            </p>
-            <p>+44 7967 483206</p>
-            <p>London, United Kingdom</p>
-            <div className="flex flex-wrap gap-x-5 gap-y-1 pt-3">
-              {[
-                { label: 'chrisbradshaw.ai', href: 'https://chrisbradshaw.ai' },
-                { label: 'collectiveintelligence.co', href: 'https://collectiveintelligence.co' },
-                { label: 'LinkedIn', href: 'https://linkedin.com/in/chrisbradshawai' },
-              ].map((l) => (
-                <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer"
-                  className="hover:opacity-70 transition-opacity"
-                  style={{ color: 'var(--text)', textDecoration: 'underline', textUnderlineOffset: '4px' }}
-                >
-                  {l.label}
-                </a>
-              ))}
+        {/* ── 7. Contact ──────────────────────────────────── */}
+        <section style={sectionPad}>
+          <div style={col}>
+            <span style={label}>Contact</span>
+            <h2 style={h2Style}>Get In Touch</h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '15px', color: 'var(--muted)' }}>
+              <a href="mailto:mail@chrisbradshaw.ai" style={{ color: 'var(--text)', fontWeight: 500, textDecoration: 'none' }}>mail@chrisbradshaw.ai</a>
+              <span>+44 7967 483206</span>
+              <span>London, United Kingdom</span>
+              <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', marginTop: '12px' }}>
+                {[
+                  { label: 'chrisbradshaw.ai', href: 'https://chrisbradshaw.ai' },
+                  { label: 'collectiveintelligence.co', href: 'https://collectiveintelligence.co' },
+                  { label: 'LinkedIn', href: 'https://linkedin.com/in/chrisbradshawai' },
+                ].map((l) => (
+                  <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer"
+                    style={{ color: 'var(--text)', fontSize: '14px', textDecoration: 'underline', textUnderlineOffset: '4px' }}>
+                    {l.label}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </section>
       </main>
 
-      {/* ── Footer ───────────────────────────────────────────── */}
+      {/* ── Footer ──────────────────────────────────────── */}
       <footer style={{ background: 'var(--nav-bg)' }}>
-        <div className="max-w-3xl mx-auto px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-sm font-medium text-white">Chris Bradshaw</p>
-          <p className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>
-            Anthropic Applied AI Architect Application · London, UK
-          </p>
+        <div style={{ maxWidth: '760px', margin: '0 auto', padding: '24px 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
+          <span style={{ fontSize: '13px', fontWeight: 600, color: '#fff' }}>Chris Bradshaw</span>
+          <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)' }}>Anthropic Applied AI Architect Application · London, UK</span>
         </div>
       </footer>
     </>
