@@ -166,11 +166,11 @@ export default function Page() {
           >
             <iframe
               src="https://app.heygen.com/embeds/b7effc58a6114899845ee29e6c092360"
-              title="Chris Bradshaw — Personal Introduction"
-              allow="autoplay; fullscreen"
+              title="Avatar Video"
+              frameBorder="0"
+              allow="encrypted-media; fullscreen;"
               allowFullScreen
               className="absolute inset-0 w-full h-full"
-              style={{ border: 'none' }}
             />
           </div>
 
