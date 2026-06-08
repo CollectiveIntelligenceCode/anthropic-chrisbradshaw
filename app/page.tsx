@@ -294,21 +294,28 @@ export default function Page() {
           <div style={col}>
             <span style={label}>Contact</span>
             <h2 style={h2Style}>Get In Touch</h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '15px', color: 'var(--muted)' }}>
-              <a href="mailto:mail@chrisbradshaw.ai" style={{ color: 'var(--text)', fontWeight: 500, textDecoration: 'none' }}>mail@chrisbradshaw.ai</a>
-              <span>+44 7967 483206</span>
-              <span>London, United Kingdom</span>
-              <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', marginTop: '12px' }}>
-                {[
-                  { label: 'chrisbradshaw.ai', href: 'https://chrisbradshaw.ai' },
-                  { label: 'collectiveintelligence.co', href: 'https://collectiveintelligence.co' },
-                  { label: 'LinkedIn', href: 'https://linkedin.com/in/chrisbradshawai' },
-                ].map((l) => (
-                  <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer"
-                    style={{ color: 'var(--text)', fontSize: '14px', textDecoration: 'underline', textUnderlineOffset: '4px' }}>
-                    {l.label}
-                  </a>
-                ))}
+            <div style={{ display: 'flex', gap: '40px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+              <img
+                src="/chris-bradshaw.png"
+                alt="Chris Bradshaw"
+                style={{ width: '200px', height: '200px', borderRadius: '12px', objectFit: 'cover', flexShrink: 0 }}
+              />
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '15px', color: 'var(--muted)' }}>
+                <a href="mailto:mail@chrisbradshaw.ai" style={{ color: 'var(--text)', fontWeight: 500, textDecoration: 'none' }}>mail@chrisbradshaw.ai</a>
+                <span>+44 7967 483206</span>
+                <span>London, United Kingdom</span>
+                <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', marginTop: '12px' }}>
+                  {[
+                    { label: 'chrisbradshaw.ai', href: 'https://chrisbradshaw.ai' },
+                    { label: 'collectiveintelligence.co', href: 'https://collectiveintelligence.co' },
+                    { label: 'LinkedIn', href: 'https://linkedin.com/in/chrisbradshawai' },
+                  ].map((l) => (
+                    <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer"
+                      style={{ color: 'var(--text)', fontSize: '14px', textDecoration: 'underline', textUnderlineOffset: '4px' }}>
+                      {l.label}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
