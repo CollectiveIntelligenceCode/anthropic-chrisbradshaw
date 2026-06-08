@@ -160,6 +160,15 @@ export default function Page() {
               }}>
                 Watch Introduction
               </a>
+              <a href="https://docs.google.com/document/d/1UBcJTZQjC2y0EFTqLnYsIYrPx1uv0JzTh00mmywsSaY/edit?tab=t.0"
+                target="_blank" rel="noopener noreferrer" style={{
+                display: 'inline-flex', alignItems: 'center',
+                padding: '12px 24px', borderRadius: '100px',
+                background: 'var(--bg-card)', color: 'var(--text)',
+                fontSize: '14px', fontWeight: 500, textDecoration: 'none',
+              }}>
+                Cover Letter
+              </a>
               <a href="/docs/Chris-Bradshaw-Anthropic-CV.pdf" style={{
                 display: 'inline-flex', alignItems: 'center',
                 padding: '12px 24px', borderRadius: '100px',
