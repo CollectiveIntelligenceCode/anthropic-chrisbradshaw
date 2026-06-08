@@ -86,7 +86,7 @@ export default function Page() {
     <>
       {/* ── Nav ──────────────────────────────────────────────── */}
       <header style={{ background: 'var(--nav-bg)' }}>
-        <div className="max-w-4xl mx-auto px-8 py-4 flex items-center justify-between">
+        <div className="max-w-3xl mx-auto px-8 py-4 flex items-center justify-between">
           <span className="text-sm font-medium tracking-wide text-white">Chris Bradshaw</span>
           <a
             href="mailto:mail@chrisbradshaw.ai"
@@ -100,7 +100,7 @@ export default function Page() {
 
       <main>
         {/* ── 1. Hero ──────────────────────────────────────────── */}
-        <section className="max-w-4xl mx-auto px-8 pt-24 pb-20">
+        <section className="max-w-2xl mx-auto px-6 pt-24 pb-20">
           <p className="text-xs font-medium mb-8 tracking-widest uppercase" style={{ color: 'var(--muted)' }}>
             Anthropic · Applied AI Architect Application
           </p>
@@ -138,7 +138,7 @@ export default function Page() {
 
         {/* ── 2. Video ─────────────────────────────────────────── */}
         <section id="video" style={{ background: 'var(--bg-card)' }}>
-          <div className="max-w-4xl mx-auto px-8 py-20">
+          <div className="max-w-2xl mx-auto px-6 py-20">
             <p className="text-xs font-medium mb-4 tracking-widest uppercase" style={{ color: 'var(--muted)' }}>Introduction</p>
             <h2
               className="font-serif font-semibold mb-4"
@@ -177,7 +177,7 @@ export default function Page() {
         </section>
 
         {/* ── 3. Why Anthropic ─────────────────────────────────── */}
-        <section className="max-w-4xl mx-auto px-8 py-20">
+        <section className="max-w-2xl mx-auto px-6 py-20">
           <p className="text-xs font-medium mb-4 tracking-widest uppercase" style={{ color: 'var(--muted)' }}>Alignment</p>
           <h2
             className="font-serif font-semibold mb-10"
@@ -204,7 +204,7 @@ export default function Page() {
 
         {/* ── 4. Experience ────────────────────────────────────── */}
         <section style={{ background: 'var(--bg-card)' }}>
-          <div className="max-w-4xl mx-auto px-8 py-20">
+          <div className="max-w-2xl mx-auto px-6 py-20">
             <p className="text-xs font-medium mb-4 tracking-widest uppercase" style={{ color: 'var(--muted)' }}>Background</p>
             <h2
               className="font-serif font-semibold mb-10"
@@ -212,7 +212,7 @@ export default function Page() {
             >
               Experience Snapshot
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               {EXPERIENCE.map((e) => (
                 <div key={e.org} className="rounded-xl p-7" style={{ background: 'var(--bg)' }}>
                   <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: 'var(--muted)' }}>
@@ -227,7 +227,7 @@ export default function Page() {
         </section>
 
         {/* ── 5. Core Strengths ────────────────────────────────── */}
-        <section className="max-w-4xl mx-auto px-8 py-20">
+        <section className="max-w-2xl mx-auto px-6 py-20">
           <p className="text-xs font-medium mb-4 tracking-widest uppercase" style={{ color: 'var(--muted)' }}>Capabilities</p>
           <h2
             className="font-serif font-semibold mb-10"
@@ -250,7 +250,7 @@ export default function Page() {
 
         {/* ── 6. Documents & Links ─────────────────────────────── */}
         <section style={{ background: 'var(--bg-card)' }}>
-          <div id="documents" className="max-w-4xl mx-auto px-8 py-20">
+          <div id="documents" className="max-w-2xl mx-auto px-6 py-20">
             <p className="text-xs font-medium mb-4 tracking-widest uppercase" style={{ color: 'var(--muted)' }}>Resources</p>
             <h2
               className="font-serif font-semibold mb-10"
@@ -277,7 +277,7 @@ export default function Page() {
         </section>
 
         {/* ── 7. Contact ───────────────────────────────────────── */}
-        <section className="max-w-4xl mx-auto px-8 py-20">
+        <section className="max-w-2xl mx-auto px-6 py-20">
           <p className="text-xs font-medium mb-4 tracking-widest uppercase" style={{ color: 'var(--muted)' }}>Contact</p>
           <h2
             className="font-serif font-semibold mb-8"
@@ -313,7 +313,7 @@ export default function Page() {
 
       {/* ── Footer ───────────────────────────────────────────── */}
       <footer style={{ background: 'var(--nav-bg)' }}>
-        <div className="max-w-4xl mx-auto px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="max-w-3xl mx-auto px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-sm font-medium text-white">Chris Bradshaw</p>
           <p className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>
             Anthropic Applied AI Architect Application · London, UK
