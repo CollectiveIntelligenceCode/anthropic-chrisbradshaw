@@ -21,6 +21,7 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: 'Chris Bradshaw | Anthropic Application',
   description: 'AI Transformation Leader and Applied AI Architect candidate introduction for Anthropic.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'Chris Bradshaw | Anthropic Application',
     description: 'AI Transformation Leader and Applied AI Architect candidate introduction for Anthropic.',

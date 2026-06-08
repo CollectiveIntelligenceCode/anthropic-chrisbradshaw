@@ -169,7 +169,8 @@ export default function Page() {
               }}>
                 Cover Letter
               </a>
-              <a href="/docs/Chris-Bradshaw-Anthropic-CV.pdf" style={{
+              <a href="https://docs.google.com/document/d/1ocmuulzWHpyPnC8DmmP6YtgQq0fPyjt_7peHkkJVCBM/edit?tab=t.0"
+                target="_blank" rel="noopener noreferrer" style={{
                 display: 'inline-flex', alignItems: 'center',
                 padding: '12px 24px', borderRadius: '100px',
                 background: 'var(--bg-card)', color: 'var(--text)',
