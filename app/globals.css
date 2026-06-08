@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --accent: #C25D3C;
-  --bg: #FAFAF8;
-  --text: #1C1C1C;
-  --muted: #6B6B6B;
-  --border: #E5E3DF;
+  --nav-bg: #141413;
+  --bg: #FAF9F5;
+  --bg-card: #F0EDE4;
+  --text: #1A1918;
+  --muted: #6B6560;
+  --border: #DDD9CF;
 }
 
 html {
@@ -20,4 +21,8 @@ body {
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+  font-family: var(--font-lora), Georgia, 'Times New Roman', serif;
 }
